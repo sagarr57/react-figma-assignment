@@ -84,10 +84,6 @@ const Schedule = () => {
       <Box sx={{ padding: "20px 0" }}>
         <ProgressBar selected={0} total={100} />
 
-        <Typography variant="h6" sx={{ mt: 2 }}>
-          SCHEDULE FORM
-        </Typography>
-
         <Grid container spacing={2} sx={{ mt: 2 }}>
           <Grid item xs={12}>
             <label htmlFor="scheduleName">DROP NAME</label>
@@ -98,6 +94,21 @@ const Schedule = () => {
               onChange={(e) => setScheduleName(e.target.value)}
               placeholder="Enter Schedule Name"
               style={{ width: "100%", padding: "10px", marginTop: "8px" }}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <label
+              htmlFor="cover-image"
+              style={{ display: "block", marginBottom: "8px" }}
+            >
+              DROP COVER IMAGE
+            </label>
+            <input
+              type="file"
+              id="cover-image"
+              accept="image/*"
+              style={{ width: "100%" }}
             />
           </Grid>
 
